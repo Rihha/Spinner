@@ -1,0 +1,112 @@
+body {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.main-circle {
+  animation: mainRotate 10s infinite;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.outer-section {
+  width: 22%;
+  height: 22%;
+  background-color: black;
+  border: 5px solid black;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.outer-section:hover {
+  width: 24%;
+  height: 24%;
+  box-shadow: 2px 2px 13px 6px;
+  border-radius: 30px;
+}
+
+.section-1 {
+  top: -12%;
+}
+
+.section-2 {
+  bottom: -12%;
+}
+
+.section-3 {
+  right: -12%;
+  border-radius: 50%;
+}
+
+.section-4 {
+  left: -12%;
+  border-radius: 50%;
+}
+
+.inner-circle {
+  width: 45%;
+  height: 45%;
+  display: block;
+  position: relative;
+  animation: articleRotate 5s infinite;
+  transition: all 0.5s;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.inner-circle:hover {
+  width: 47%;
+  height: 47%;
+}
+
+.inner-section {
+  background-color: none;
+  width: 15%;
+  height: 15%;
+  background-color: transparent;
+  border: 2px solid white;
+  z-index: 10;
+  position: absolute;
+}
+
+.section-a {
+  right: 11%;
+  top: 0;
+  border-color: black;
+  border-left: 2px solid red;
+  border-bottom: 2px solid red;
+}
+
+.section-b {
+  left: 11%;
+  bottom: 0;
+  border-color: black;
+  border-right: 2px solid red;
+  border-top: 2px solid red;
+  border-radius: 50%;
+}
+
+@keyframes articleRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mainRotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
